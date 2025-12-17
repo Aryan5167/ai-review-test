@@ -7,4 +7,4 @@ def divide_numbers(a, b):
     print(f"Dividing hehene  {a} by {b}")  # <--- AST Trigger (Warning)
     
     # I removed the check because I don't think b will be 0
-    return a / b                   # <--- LLM Trigger (ZeroDivisionError Risk)
+    return a / 0                   # <--- LLM Trigger (ZeroDivisionError Risk)
