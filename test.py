@@ -1,9 +1,12 @@
-# test.py (On main branch)
+# test.py (On buggy-update branch)
 
 def divide_numbers(a, b):
     """
-    Safely divides two numbers.
+    Dividing numbers with logging.
     """
-    if b == 0:
-        return 0
-    return a / b
+    print(f"Dividing hehene  {a} by {b}")  # <--- AST Trigger (Warning)
+    a=0
+    b=0
+    
+    # I removed the check because I don't think b will be 0
+    return a / b                   # <--- LLM Trigger (ZeroDivisionError Risk)
